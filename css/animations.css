@@ -1,0 +1,170 @@
+.wallpaper,
+.portrait,
+.name,
+.job,
+.hr,
+.description,
+.contact,
+.social li
+{
+    animation-duration: 1s;
+    animation-name: picImage;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0, 0.5, 0, 1);
+}
+
+.wallpaper
+{
+    animation-name: zoomOut;
+}
+.portrait
+{
+    animation-name: picImage;
+    animation-duration: 750ms;
+    animation-timing-function: cubic-bezier(0, 0.5, 0.25, 1.25);
+}
+
+.name
+{
+    animation-name: slideDown;
+}
+
+.job, .description
+{
+    animation-name: slideUp;
+}
+
+.hr
+{
+    animation-name: fillUp;
+}
+
+.contact
+{
+    animation-name: bounceIn;
+}
+
+.social li
+{
+    animation-duration: 0.5s;
+    animation-name: slideUp;
+    animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1.5);
+}
+
+.hr, .contact
+{
+    transform-origin: top left;
+}
+
+.name
+{
+    animation-delay: 100ms;
+}
+
+.job
+{
+    animation-delay: 200ms;
+}
+
+.hr
+{
+    animation-delay: 300ms;
+}
+
+.description
+{
+    animation-delay: 400ms;
+}
+
+.portrait, .contact
+{
+    animation-delay: 500ms;
+}
+
+.social li:nth-child(1)
+{
+    animation-delay: 800ms;
+}
+
+.social li:nth-child(2)
+{
+    animation-delay: 900ms;
+}
+
+
+
+
+@keyframes picImage
+{
+    from
+    {
+        opacity: 0;
+        transform: scale(1.2) translateY(-1rem);
+    }
+
+    to
+    {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes bounceIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes fillUp {
+    from {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+    
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-1rem);
+    }
+    
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+    
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes zoomOut {
+    from {
+        opacity: 0;
+        transform: scale(1.05);
+    }
+    
+    to {
+        opacity: 0.2;
+        transform: none;
+    }
+}

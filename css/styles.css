@@ -1,0 +1,183 @@
+html {
+    background-color: #5f45bb;
+    color: white;
+    background-image: linear-gradient(to bottom right, #00e4de, #0200d8, #b5004c);
+    min-height: 100vh;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    min-width: 300px;
+    overflow-x: hidden;
+    line-height: 1.5;
+    text-shadow: 0 0.25em 0.5em rgb(0 0 0 / 10%);
+    font-family: "Quicksand", sans-serif;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.job,
+.button {
+    font-family: "Montserrat", "Quicksand", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+}
+
+.wallpaper {
+    background-image: url("../images/abstract-geometry-glass-dark-4k.jpg");
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.2;
+}
+
+.content {
+    display: flex;
+    min-height: 100vh;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.side {
+    max-height: 20rem;
+    max-width: 20rem;
+}
+
+.portrait {
+    border-radius: 9999px;
+    box-shadow: 0 2em 2em rgb(0 0 0 / 30%);
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    max-width: 32rem;
+    gap: 1.5rem;
+}
+
+.name {
+    font-size: 2.25rem;
+    line-height: 1.125;
+    margin-bottom: -1rem;
+}
+
+.job {
+    color: #100d6e;
+    font-size: 0.75rem;
+}
+
+.hr {
+    background-color: #ff5eb8;
+    border: none;
+    content: "";
+    height: 1px;
+    width: 13rem;
+}
+
+.description {
+    font-size: 1.5rem;
+}
+
+.contact {
+    display: flex;
+}
+
+.button {
+    border-radius: 9999px;
+    box-shadow: 0 1rem 2rem rgb(0 0 0 / 40%), inset 0 1px 0 0 #3c3fb9f2;
+    background-image: linear-gradient(#16186ac2, #16186af2);
+    color: #c82c83;
+    display: inline-block;
+    font-size: 0.875rem;
+    line-height: 1;
+    padding: 1.25em 2em;
+    text-shadow: none;
+    user-select: none;
+    vertical-align: top;
+    white-space: nowrap;
+    text-decoration: none;
+    transition-duration: 500ms;
+    transition-property: box-shadow, transform;
+    will-change: box-shadow, transform;
+}
+
+.button:hover {
+    box-shadow: 0 1.5rem 3rem rgb(0 0 0 / 40%);
+    transform: translateY(-4px);
+}
+
+.button:active {
+    box-shadow: 0 1rem 1.5rem rgb(0 0 0 / 40%);
+    transform: translateY(-2px);
+}
+
+.social {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.social li {
+    height: 2rem;
+    width: 2rem;
+    text-align: center;
+}
+
+.social a {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    justify-content: center;
+    height: 2rem;
+    opacity: 0.5;
+    transition-duration: 500ms;
+    transition-property: opacity, transform;
+}
+
+.social a:hover {
+    opacity: 0.8;
+    transform: scale(1.25);
+}
+
+.social a:active {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 799px) {
+    .content {
+        flex-direction: column;
+        padding: 5rem 3rem;
+        text-align: center;
+    }
+
+    .about {
+        align-items: center;
+    }
+
+    .job {
+        mix-blend-mode: difference;
+    }
+}
+
+
+@media screen and (min-width: 800px) {
+    .content {
+        padding: 4rem;
+    }
+
+    .side {
+        flex-shrink: 0;
+        order: 1;
+    }
+
+    .job {
+        mix-blend-mode: color-burn;
+    }
+}
